@@ -1,0 +1,298 @@
+h3 {
+  margin-top: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+}
+.close {
+  float: right;
+  font-size: x-large;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.Closeicon{
+float: inline-end;
+cursor: pointer;
+font-size: medium;
+}
+.label {
+  font-size: medium;
+  margin-right: 10px;
+  
+}
+.label2{
+  font-size: small;
+  margin-right: 10px;
+}
+
+.form-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.container-form {
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 2px 7px 5px 7px #888888be;
+  position: absolute;
+  justify-content: center;
+  align-content: center;
+  background-color: #fff;
+  /* height: 340px; */
+  width: 400px;
+}
+
+.btn-colors {
+  width: 30px;
+  border-radius: 60px;
+  height: 30px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-bottom: 10px;
+}
+.btn-123 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#b6 {
+  background-color: #17273d;
+}
+#b2 {
+  background-color: #ae2d68;
+}
+#b4 {
+  background-color: #3d5872;
+}
+#b3 {
+  background-color: #029891;
+}
+#b7 {
+  background-color: #ffb32b;
+}
+#b6 {
+  background-color: #f47f6b;
+}
+#b5 {
+  background-color: #7a5197;
+}
+
+#urgent {
+  width: 150px;
+  margin-top: 10px;
+  background: #ff4742;
+  border: 1px solid #ff4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+#urgent:hover,
+#urgent:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #ff4742;
+}
+
+.urgent:active {
+  opacity: 0.5;
+}
+
+#Fronted {
+  width: 150px;
+  margin-top: 10px;
+  background: #3d5872;
+  border: 1px solid #ff4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  margin-left: 40px;
+}
+
+#Fronted:hover,
+#Fronted:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: green;
+}
+
+#Fronted:active {
+  opacity: 0.5;
+}
+
+.button123 {
+  display: flex;
+  justify-content: center;
+}
+
+#adddate {
+  cursor: pointer;
+}
+
+.maindiv {
+  width: fit-content;
+}
+
+#addfunction,
+#adddate,
+#addlabel {
+  font-weight: bold;
+  text-align: center;
+}
+
+.maincard{
+    margin-left: 7px;
+    margin-right: 7px;
+}
+.addlabels{
+  width: 100px;
+  background-color: #029891;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: white;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+  
+}
+.lbbar{
+  margin-top: 10px;
+  border: 1px solid grey;
+  box-shadow: 1px 5px 5px 2px #888888be;
+  width: 300px;
+  
+  
+}
+.closeicons2{
+  margin-top: 5px;
+}
+.submittask{
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+}
+.task{
+  width: 110px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  margin: 10px 10px;
+  height: 40px;
+  border: 2px solid gray;
+  box-shadow: 10px 7px 10px 7px;
+}
+.Dropdown{
+  height: 25px;
+  margin-right:10px ;
+  cursor: pointer;
+  background-color: #3d5872;
+  color: white;
+  border: 1px solid wheat;
+  border-radius: 5px;
+  font-size: small;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.button-62{
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  margin: 5px;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+.labeltag{
+  margin-top: 15px;
+}
+.addlabelsname{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+
+.buttonadd{
+  border: 1px solid black;
+  border-radius: 4px;
+  color: white;
+  background-color: #ae2d68;
+  width: 80px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.addlabelbutton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  
+}
+.allbuttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
