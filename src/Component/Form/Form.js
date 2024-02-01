@@ -8,15 +8,25 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import  ReactDatePicker  from "react-datepicker";
+import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-const Form = ({ setForm }) => {
+import { v4 as uuidv4 } from "uuid";
+import { addTaskToStorage } from "../common";
+
+const Form = ({ setForm, setflag }) => {
   const [isCloseSet, Closeset] = useState(false);
-  const [date,setDate]=useState(new Date());
-  
+  const [date, setDate] = useState(new Date());
+  const [userName, setuserName] = useState();
+  const [description, setdescription] = useState();
+  const [label, setlabel] = useState();
+  const [Dropdown, setDropdown] = useState();
+
+  const Task = () => {
+    addTaskToStorage(userName, description, date, Dropdown, setflag, setForm,);
+  };
+
   return (
     <>
-    
       <div className="form-main">
         <div className="container-form">
           <div className="close">
@@ -28,12 +38,18 @@ const Form = ({ setForm }) => {
             />
           </div>
           <div className="maincard">
-            <h3><FontAwesomeIcon icon={faUser} className="label" />Username</h3>
+            <h3>
+              <FontAwesomeIcon icon={faUser} className="label" id="Username" />
+              Username
+            </h3>
             <input
               type="text"
               placeholder="Enter Username"
               className="col-md-6"
               id="addfunction"
+              onChange={(e) => {
+                setuserName(e.target.value);
+              }}
             ></input>
             <h3 className="col-md-6">
               <FontAwesomeIcon icon={faBars} className="label" />
@@ -45,6 +61,9 @@ const Form = ({ setForm }) => {
               placeholder="Add Date Function to this project."
               className="col-md-9"
               id="addfunction"
+              onChange={(e) => {
+                setdescription(e.target.value);
+              }}
             ></input>
 
             <h3 className="col-md-3">
@@ -57,16 +76,24 @@ const Form = ({ setForm }) => {
               className="col-md-5"
               id="adddate" 
             ></input>*/}
-            
-            <ReactDatePicker selected={date} onChange={date => setDate(date)} /> 
+
+            <ReactDatePicker
+              selected={date}
+              onChange={(date) => setDate(date)}
+            />
             <div className="labeltag">
               <FontAwesomeIcon icon={faTag} className="label" />
-              <select className="Dropdown">
-                <option value="">Urgent</option>
+              <select
+                className="Dropdown"
+                onChange={(e) => {
+                  setDropdown(e.target.value);
+                }}
+              >
+                <option value="Urgent">Urgent</option>
 
-                <option value="">Fronted</option>
+                <option value="Fronted">Fronted</option>
 
-                <option value="">Emergency</option>
+                <option value="Emergency">Emergency</option>
               </select>
               <button
                 className="addlabels"
@@ -95,6 +122,7 @@ const Form = ({ setForm }) => {
                       placeholder="Label Name"
                       className=""
                       id="addlabel"
+                      onChange={(e) => {}}
                     ></input>
                   </div>
                   <div className="allbuttons">
@@ -120,7 +148,12 @@ const Form = ({ setForm }) => {
                     </div>
                   </div>
                   <div className="addlabelbutton">
-                    <button className="buttonadd">Add</button>
+                    <button
+                      className="buttonadd"
+                      onClick={() => Closeset(false)}
+                    >
+                      Add
+                    </button>
                   </div>
                 </div>
               </>
@@ -128,7 +161,13 @@ const Form = ({ setForm }) => {
           </div>
 
           <div className="col-md-12 submittask">
-            <button class="button-62" role="button">
+            <button
+              className="button-62"
+              role="button"
+              onClick={() => {
+                Task();
+              }}
+            >
               Add Task
             </button>
           </div>
