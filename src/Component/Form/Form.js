@@ -10,19 +10,20 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 import { addTaskToStorage } from "../common";
 
-const Form = ({ setForm, setflag }) => {
+const Form = ({ setForm, setflag,addTask }) => {
   const [isCloseSet, Closeset] = useState(false);
   const [date, setDate] = useState(new Date());
   const [userName, setuserName] = useState();
   const [description, setdescription] = useState();
-  const [label, setlabel] = useState();
+  // const [label, setlabel] = useState();
   const [Dropdown, setDropdown] = useState();
 
-  const Task = () => {
+  const Task = (addTask) => {
     addTaskToStorage(userName, description, date, Dropdown, setflag, setForm,);
+    addTask();
   };
 
   return (
@@ -163,9 +164,8 @@ const Form = ({ setForm, setflag }) => {
           <div className="col-md-12 submittask">
             <button
               className="button-62"
-              role="button"
               onClick={() => {
-                Task();
+                Task(addTask);
               }}
             >
               Add Task
